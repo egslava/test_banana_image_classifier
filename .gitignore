@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+.DS_Store
+
+.idea
+# Sure, I don't ignore IntelliJ files usually
+# but for this test task I want to keep the repo small
