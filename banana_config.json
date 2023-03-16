@@ -2,6 +2,6 @@
     "name": "MTailor image classifier",
     "category": "Computer Vision",
     "example_input": {"image": "UklGRiwAAABXRUJQVlA4ICAAAABQAQCdASoBAAEAAkA4JQBOgCgAAP76eV8CStWlVemeAA=="},
-    "example_output": {"class": "0"},
+    "example_output": {"class": "111"},
     "version": "1"
   }
