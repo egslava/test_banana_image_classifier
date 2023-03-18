@@ -23,6 +23,9 @@ RUN python3 download.py
 # Add your custom app code, init() and inference()
 ADD app.py .
 
+COPY _2_convert_to_onnx _2_convert_to_onnx
+COPY rescale.py .
+
 EXPOSE 8000
 
 CMD python3 -u server.py
