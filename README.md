@@ -1,6 +1,4 @@
-
 # ImageNet classifier on Banana.dev
-
 
 ## Cloning
 Clone the repo and run:
@@ -24,18 +22,11 @@ It will:
    examples
 4) Run the API (Banana) server
 5) Test the server against the provided examples
+6) Build the Docker image
+7) Test the Docker image with the provided examples.
 
 
-## Banana API
-API should (but not) available, since my connection 
-often drops, but the base docker image is about 3GB.
-Thus, every time the connection drops, it just 
-starts downloading it over and over again. I was 
-dumb enough to try starting downloading Docker 
-image only ~3h after I started and, thus, 2h was 
-not enough to download it. Optimistically, soon API 
-would be available and it would be possible to call 
-it by calling:
+## Example api call:
 
 ```bash
 curl --location --request POST 'https://api.banana.dev/start/v4/' \
@@ -49,8 +40,25 @@ curl --location --request POST 'https://api.banana.dev/start/v4/' \
 }'
 ```
 
-Since I don't have downloaded docker image, it's 
-hard for me to debug effectively. I tried debug on 
-banana.dev itself, but it takes ~20-25 minutes to 
-compile the model, so it's also quite 
-time-consuming and breaks the 5h limit for this task.
+Where image is base64-encoded image file.
+
+Example output:
+
+```json
+{
+    "id": "a46d75e8-e9c9-474b-a939-3fd8e849ceec",
+    "message": "",
+    "created": 1679143667,
+    "apiVersion": "January 11, 2023",
+    "callID": "",
+    "finished": true,
+    "modelOutputs": [
+        {
+            "class": "111"
+        }
+    ]
+}
+```
+
+The API is fully working, you can check it manually,
+via Postman.
