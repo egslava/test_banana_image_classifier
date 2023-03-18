@@ -134,4 +134,3 @@ dmypy.json
 .idea
 # Sure, I don't ignore IntelliJ files usually
 # but for this test task I want to keep the repo small
-model.onnx
